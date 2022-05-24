@@ -31,3 +31,11 @@ class Cheat_Loaded_Dice(Player): # inheritance of Player
               self.dice[i] += 1
           i += 1
 
+class My_Cheat(Player):
+    def cheat(self):
+        i = 0
+        while i < len(self.dice):
+            rand1 = randint(1,3)
+            if i == rand1 and self.dice[i] <= 6:
+                self.dice[i] += 6 
+            i += 1 
